@@ -23,7 +23,6 @@ public class Main {
                 }
             }
         }
-
     }
     public static int[] removeRepeat(int[] arrayA){
         int[] arrayB = new int[1000];
