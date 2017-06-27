@@ -24,15 +24,14 @@ public class Main {
             }
         }
     }
-    public static int[] removeRepeat(int[] arrayA){
+    public static int[] removeRepeat(int[] arrayA) {
         int[] arrayB = new int[1000];
-        for (int i=0;i<1000;i++){
+        for (int i = 0; i < 1000; i++) {
             arrayB[i] = 0;
         }
-        for(int i=0;i< arrayA.length;i++){
+        for (int i = 0; i < arrayA.length; i++) {
             arrayB[arrayA[i]] = 1;
         }
         return arrayB;
     }
-
 }
