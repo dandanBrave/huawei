@@ -11,15 +11,16 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         while(sc.hasNext()){
             String str = sc.nextLine();
-            reverseWord(str);
+            String reverse = new Main().reverseWord(str);
+            System.out.println(reverse);
         }
     }
-    public static void reverseWord(String sentence){
+    public static String reverseWord(String sentence){
         String[] arrStr = sentence.split(" ");
-        System.out.print(arrStr.length);
-        for(int i=0;i<arrStr.length;i++){
-
-            //System.out.print(arrStr[i]+" ");
+        StringBuilder sb = new StringBuilder();
+        for(int i=arrStr.length-1;i>=0;i--){
+            sb.append(arrStr[i]+" ");
         }
+        return sb.toString().trim();
     }
 }
