@@ -7,20 +7,16 @@ package thirteen;
  */
 import java.util.Scanner;
 public class Main {
-    public static void main(){
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         while(sc.hasNext()){
             String str = sc.nextLine();
-            String reverse = new Main().reverseWord(str);
-            System.out.println(reverse);
+            String[] arrStr = str.split(" ");
+            StringBuilder sb = new StringBuilder();
+            for(int i=arrStr.length-1;i>=0;i--){
+                sb.append(arrStr[i]+" ");
+            }
+            System.out.println(sb.toString());
         }
-    }
-    public static String reverseWord(String sentence){
-        String[] arrStr = sentence.split(" ");
-        StringBuilder sb = new StringBuilder();
-        for(int i=arrStr.length-1;i>=0;i--){
-            sb.append(arrStr[i]+" ");
-        }
-        return sb.toString().trim();
     }
 }
