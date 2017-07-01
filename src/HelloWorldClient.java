@@ -11,7 +11,7 @@ public class HelloWorldClient {
         Socket client = null;
         PrintWriter writer = null;
         try {
-            client = new Socket("10.170.64.180", 9000);//www.feifeishi.cn是我的云服务器
+            client = new Socket("192.168.148.2", 9000);//www.feifeishi.cn是我的云服务器
             OutputStream out = client.getOutputStream();
             writer = new PrintWriter(out);
             Scanner sc=new Scanner(System.in);
